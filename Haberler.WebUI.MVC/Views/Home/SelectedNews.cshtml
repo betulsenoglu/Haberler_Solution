@@ -1,0 +1,17 @@
+﻿@model Haberler.WebUI.MVC.Models.Haber
+
+@{
+    ViewData["Title"] = "SelectedNews";
+}
+
+
+<br />
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h6>Haber NO: @Html.DisplayFor(x => x.Id)</h6></li>
+
+        <li class="list-group-item">@Html.DisplayFor(x => x.Title)</li>
+        <li class="list-group-item">@Html.Raw(Model.Text)</li>
+        <li class="list-group-item"><h6>@Html.DisplayFor(x => x.StartDate)</h6></li>
+    </ul>
+</div>

@@ -1,0 +1,14 @@
+﻿@model string
+@{
+    ViewData["Title"] = "HATA";
+}
+
+<h1 class="text-danger">HATA.</h1>
+<h2 class="text-danger">Bir Hata Oluştu.</h2>
+
+<p>
+    <strong>Aradığınız Sayfa Bulunamadı... </strong> <code>@Model</code>
+</p>
+
+
+@Html.ActionLink("GERİ DÖN", "Index", "Home", new { @class = "btn btn-primary" })

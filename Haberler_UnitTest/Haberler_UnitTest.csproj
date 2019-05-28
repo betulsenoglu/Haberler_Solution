@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp2.1\AppData\news.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\Haberler_UnitTest.deps.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\Haberler_UnitTest.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\Haberler_UnitTest.runtimeconfig.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp2.1\Haberler.WebUI.MVC.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\Haberler.WebUI.MVC.pdb" />
+    <None Include="bin\Debug\netcoreapp2.1\Haberler.WebUI.MVC.Views.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\Haberler.WebUI.MVC.Views.pdb" />
+    <None Include="bin\Debug\netcoreapp2.1\HaberlerWebAPI.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\HaberlerWebAPI.pdb" />
+    <None Include="bin\Debug\netcoreapp2.1\Haberler_UnitTest.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\Haberler_UnitTest.pdb" />
+    <None Include="bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll" />
+    <None Include="bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HaberlerWebAPI\HaberlerWebAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.core\2.1.1\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

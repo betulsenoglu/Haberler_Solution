@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Haberler.WebUI.MVC.Models.Haber>
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+
+            <div class="col-md-4">
+                <div class="item-box-blog">
+
+
+
+                    <div class="item-box-blog-body">
+                        <div class="item-box-blog-heading">
+                            <h3>@Html.DisplayFor(modelItem => item.Id) </h3>
+
+                        </div>
+                        <div class="item-box-blog-body">
+                            <h3>@Html.DisplayFor(modelItem => item.Title) </h3>
+
+                        </div>
+                        <br />
+                        @Html.ActionLink("Haberi İncele", "SelectedNews", "Home", new { Id = item.Id }, new { @class = "btn btn-primary" })
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
